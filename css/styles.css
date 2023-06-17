@@ -1,0 +1,139 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+
+:root {
+    /*  COLOURS FROM: https://github.com/morhetz/gruvbox */
+    --background: #282828;
+    --black: #282828;
+    --red: #cc241d;
+    --green: #98971a;
+    --yellow: #d79921;
+    --blue: #458588;
+    --purple: #b16286;
+    --cyan: #689d6a;
+    --gray: #a89984;
+    --brightBlack: #928374;
+    --brightRed: #fb4934;
+    --brightGreen: #b8bb26;
+    --brightYellow: #fabd2f;
+    --brightBlue: #83a598;
+    --brightPurple: #d3869b;
+    --brightCyan: #8ec07c;
+    --white: #ebdbb2;
+    --foreground: #fbf1c7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    height: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.container {
+    margin: auto;
+}
+
+/* ELEMENTS */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--brightGreen);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--brightCyan);
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.81rem;
+}
+
+/* CLASS */
+.skill-item::before {
+    content: "-";
+    margin-right: 0.5rem;
+}
+
+.highlight .chroma {
+    overflow-x: scroll;
+    line-height: 1rem;
+}
+
+div > .chroma {
+    padding: 0.3rem;
+}
+
+/* https://discourse.gohugo.io/t/height-mismatch-of-highlighted-line-number-in-syntax-highlighting/42304/8 */
+div.highlight > div.chroma > table.lntable .lnt,
+div.highlight > div.chroma > table.lntable .hl {
+    display: flex;
+}
+
+/* ID */
+#header {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+#about-name {
+    font-size: 2rem;
+}
+
+#about-job {
+    color: var(--brightGreen);
+    padding-bottom: 1rem;
+}
+
+#header > ul > li, #footer > ul > li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+#about-name, #page-title, #content-type-header {
+    font-size: 2rem;
+}
+
+#about-job, #content-type-header, #page-title-section {
+    margin-bottom: 1rem;
+}
+
+#page-title, #about-name {
+    margin-bottom: 0.25rem;
+}
+
+#page-date {
+    color: var(--gray)
+}
+
+#page-content > p {
+    margin: 1.5rem 0rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1279px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 50%;
+    }
+}
