@@ -43,7 +43,12 @@ body {
 }
 
 /* ELEMENTS */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--brightGreen);
 }
 
@@ -75,13 +80,13 @@ code {
     line-height: 1rem;
 }
 
-div > .chroma {
+div>.chroma {
     padding: 0.3rem;
 }
 
 /* https://discourse.gohugo.io/t/height-mismatch-of-highlighted-line-number-in-syntax-highlighting/42304/8 */
-div.highlight > div.chroma > table.lntable .lnt,
-div.highlight > div.chroma > table.lntable .hl {
+div.highlight>div.chroma>table.lntable .lnt,
+div.highlight>div.chroma>table.lntable .hl {
     display: flex;
 }
 
@@ -100,20 +105,26 @@ div.highlight > div.chroma > table.lntable .hl {
     padding-bottom: 1rem;
 }
 
-#header > ul > li, #footer > ul > li {
+#header>ul>li,
+#footer>ul>li {
     display: inline-block;
     margin-right: 0.5rem;
 }
 
-#about-name, #page-title, #content-type-header {
+#about-name,
+#page-title,
+#content-type-header {
     font-size: 2rem;
 }
 
-#about-job, #content-type-header, #page-title-section {
+#about-job,
+#content-type-header,
+#page-title-section {
     margin-bottom: 1rem;
 }
 
-#page-title, #about-name {
+#page-title,
+#about-name {
     margin-bottom: 0.25rem;
 }
 
@@ -121,7 +132,7 @@ div.highlight > div.chroma > table.lntable .hl {
     color: var(--gray)
 }
 
-#page-content > p {
+#page-content>p {
     margin: 1.5rem 0rem;
 }
 
