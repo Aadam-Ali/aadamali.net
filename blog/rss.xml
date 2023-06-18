@@ -1,0 +1,62 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Aadam | DevOps Engineer</title><link>https://aadamali.net/blog/</link><description>Blog Posts by Aadam Ali</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>2023-06-18</lastBuildDate><atom:link href="https://aadamali.net/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title>Hello World!</title><link>https://aadamali.net/blog/hello-world/</link><pubDate>2023-06-18</pubDate><guid>https://aadamali.net/blog/hello-world/</guid><description>&lt;h2 id="who-am-i">Who Am I?&lt;/h2>
+&lt;p>Hello! My name is Aadam, at the time of writing I&amp;rsquo;m an Apprentice DevOps
+Engineer working at
+&lt;a href="https://www.gov.uk/government/organisations/hm-revenue-customs/about">HMRC&lt;/a>,
+on the &lt;a href="https://hmrc.github.io/">MDTP&lt;/a> (Multi Channel Digital Tax
+Platform) for the Build and Deploy team.&lt;/p>
+&lt;p>I&amp;rsquo;ve been involved with technology for the best part of the last 6
+years, ever since I built my first PC (Pentium G4400, RX 480, 8GB RAM).
+And thanks to the first COVID-19 lockdown I started learning full
+stack web development - my first foray into programming outside of my
+GSCE and A-Level Computer Science courses. Over the following months, I
+learnt HTML, CSS, and JavaScript before moving on to Node.js, React,
+and MongoDB, using Linux (Ubuntu via WSL) and Git along the way.&lt;/p>
+&lt;p>My first self-directed full stack project was
+&lt;a href="https://github.com/Aadam-Ali/twitter-clone">twitter-clone&lt;/a>, which
+unsurpisingly was my attempt to clone Twitter using the MERN (MongoDB,
+Express, React, and Node.js) stack, if you have look at the repository
+my lack of knowledge at the time really shows - I wrote all the code
+without tests in two commits! I didn&amp;rsquo;t manage to finish it but I intend
+to do a V2 with my new found knowledge.&lt;/p>
+&lt;p>Not long after writing twitter-clone, I found out that I had been
+enrolled onto the apprenticeship, and so my focus shifted to learning
+the tools that I knew were being used on MDTP. I now spend most of my
+time working with AWS, Python, Terraform, Jenkins, and Artifactory.&lt;/p>
+&lt;h2 id="why-am-i-starting-a-blog">Why Am I Starting A Blog?&lt;/h2>
+&lt;p>There are three main reasons:&lt;/p>
+&lt;ul>
+&lt;li>Recently, I completed my apprenticeship portfolio - the only regular
+writing that I was doing. As someone who doesn&amp;rsquo;t particularly enjoy
+writing I wanted a reason to keep writing regularly.&lt;/li>
+&lt;li>Most software / devops engineers have benefited from blog posts,
+whether it was finding a solution to a very specific problem,
+learning a new concept, or even gaining understanding of different
+perspectives on various topics.&lt;/li>
+&lt;li>A blog allows me to keep a record of the projects, learnings,
+experiences, and achievements I&amp;rsquo;ve made over time - it&amp;rsquo;s a window into
+past versions of myself that I can look back on and reflect on how
+I&amp;rsquo;ve improved.&lt;/li>
+&lt;/ul>
+&lt;p>Alongside the above points the straw that broke the camel&amp;rsquo;s back was
+reading Ben Kuhn&amp;rsquo;s &lt;a href="https://www.benkuhn.net/writing/">&amp;lsquo;Why and how to write things on the
+Internet&amp;rsquo;&lt;/a>. For anyone else
+considering starting a blog but unsure about how to start writing, I
+highly recommend reading it.&lt;/p>
+&lt;h2 id="what-can-you-expect">What Can You Expect?&lt;/h2>
+&lt;p>I don&amp;rsquo;t really have a set of topics that I&amp;rsquo;m going to limit this blog
+to, however, I expect that the majority of posts will cover topics, and
+concepts under the DevOps umbrella: cloud, programming, cybersecurity,
+etc.&lt;/p>
+&lt;p>What I can guarantee is that my next few posts will be about: the
+architecture of this site, my hardware, my development environment,
+and my apprenticeship experience. You can also expect new posts every
+two weeks.&lt;/p>
+&lt;p>I also intend to add another section to the site, Snippets.
+Snippets will be very short posts containing code snippets and commands
+that I find useful in my daily work.&lt;/p>
+&lt;h2 id="closing">Closing&lt;/h2>
+&lt;p>Thank you for taking the time to read this post, hopefully, the first
+of many. If you are interested in following my blog, there is an &lt;a href="https://aadamali.net/blog/rss.xml">RSS
+feed&lt;/a> available. Feel free to reach out to me if you
+have any suggestions for topics you&amp;rsquo;d like me to write about, or
+improvements that could be made to this site.&lt;/p></description></item></channel></rss>

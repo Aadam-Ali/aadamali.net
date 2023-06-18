@@ -56,10 +56,6 @@ ul {
     list-style-position: inside;
 }
 
-li {
-    list-style: none;
-}
-
 a {
     color: var(--brightCyan);
 }
@@ -88,6 +84,10 @@ div>.chroma {
 div.highlight>div.chroma>table.lntable .lnt,
 div.highlight>div.chroma>table.lntable .hl {
     display: flex;
+}
+
+.links>li {
+    list-style: none;
 }
 
 /* ID */
@@ -128,12 +128,21 @@ div.highlight>div.chroma>table.lntable .hl {
     margin-bottom: 0.25rem;
 }
 
-#page-date {
+#page-info {
     color: var(--gray)
 }
 
-#page-content>p {
+#page-content>p, #page-content>ul, #page-content>ol {
     margin: 1.5rem 0rem;
+}
+
+#page-content>ul, #page-content>ol {
+    padding-left: 2rem;
+    list-style-position: outside;
+}
+
+#skills>li {
+    list-style: none;
 }
 
 /* MEDIA QUERIES */
