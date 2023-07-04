@@ -65,10 +65,15 @@ code {
     font-size: 0.81rem;
 }
 
+
 /* CLASS */
-.skill-item::before {
+.skill-item::before, .page-link::before {
     content: "-";
     margin-right: 0.5rem;
+}
+
+.page-link {
+    list-style: none;
 }
 
 .highlight .chroma {
@@ -84,10 +89,6 @@ div>.chroma {
 div.highlight>div.chroma>table.lntable .lnt,
 div.highlight>div.chroma>table.lntable .hl {
     display: flex;
-}
-
-.links>li {
-    list-style: none;
 }
 
 /* ID */
@@ -108,7 +109,7 @@ div.highlight>div.chroma>table.lntable .hl {
 #header>ul>li,
 #footer>ul>li {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 #about-name,
@@ -137,7 +138,7 @@ div.highlight>div.chroma>table.lntable .hl {
 }
 
 #page-content>ul, #page-content>ol {
-    padding-left: 2rem;
+    margin-left: 2rem;
     list-style-position: outside;
 }
 

@@ -1,18 +1,106 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Aadam | DevOps Engineer</title><link>https://aadamali.net/blog/</link><description>Blog Posts by Aadam Ali</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>2023-06-18</lastBuildDate><atom:link href="https://aadamali.net/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title>Hello World!</title><link>https://aadamali.net/blog/hello-world/</link><pubDate>2023-06-18</pubDate><guid>https://aadamali.net/blog/hello-world/</guid><description>&lt;h2 id="who-am-i">Who Am I?&lt;/h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Aadam | DevOps Engineer</title><link>https://aadamali.net/blog/</link><description>Blog Posts by Aadam Ali</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>2023-07-02</lastBuildDate><atom:link href="https://aadamali.net/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title>Site Design</title><link>https://aadamali.net/blog/site-design/</link><pubDate>2023-07-02</pubDate><guid>https://aadamali.net/blog/site-design/</guid><description>&lt;p>As promised in my &lt;a href="https://aadamali.net/blog/hello-world">first post&lt;/a>
+, here is the post
+about the architecture (and design) of this site. I&amp;rsquo;m going to talk
+about the tools and design choices made that made this webiste possible.&lt;/p>
+&lt;h2 id="hugo">Hugo&lt;/h2>
+&lt;p>My first decision was to use a static site generator (SSG) - this was to
+avoid the overhead of having to manage the HTML and CSS for each page,
+allowing me to concentrate on actually writing the content. This is also
+helped by the fact that in most SSGs posts are written in Markdown
+rather than HTML, which makes writing content much easier.&lt;/p>
+&lt;p>Choosing an SSG was fairly straightforward, I wanted to use something
+that was well documented and had a large community. This left me with
+two choices, &lt;a href="https://gohugo.io/about/what-is-hugo/" target="_blank" rel="noopener">Hugo&lt;/a>
+and
+&lt;a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll&lt;/a>
+. I ended up choosing Hugo for two main
+reasons, I liked the fact that it was a single binary and didn&amp;rsquo;t require
+me to install anything extra on my system for example Jekyll requires
+Ruby to be installed on your system. The second reason was that Hugo
+seemed to be the faster of the two options.&lt;/p>
+&lt;p>From my experience so far Hugo is pretty easy to use. I was able to set
+up this website&amp;rsquo;s components (header, footer, title sections, etc.) and
+layouts - single pages (like the one you&amp;rsquo;re reading) and lists, e.g.
+&lt;a href="https://aadamali.net/blog">/blog&lt;/a>
+- within a couple of hours.&lt;/p>
+&lt;h2 id="two-repos">Two Repos&lt;/h2>
+&lt;p>This website is managed using two repositories, blog and
+&lt;a href="https://github.com/Aadam-Ali/aadamali.net" target="_blank" rel="noopener">aadamali.net&lt;/a>
+.&lt;/p>
+&lt;p>The blog repo contains the &lt;a href="https://gohugo.io/getting-started/directory-structure/#new-site-scaffolding" target="_blank" rel="noopener">Hugo directory
+structure&lt;/a>
+and a &lt;code>Makefile&lt;/code> (see below):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">archetypes/ content/ hugo.toml Makefile resources/ themes/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">assets/ data/ layouts/ public/ static
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is a private repository that I do not intend on making publicly
+available. However, if there is interest in the theme of this site, I am
+happy to create a separate repository containing the Hugo theme.&lt;/p>
+&lt;p>aadamali.net is a public repository that contains the static content
+that you are currently viewing. This is a submodule of the blog
+repository under the &lt;code>public/&lt;/code> directory. To build the content I run the
+&lt;code>make&lt;/code> command from the blog repository, I then commit and push the
+static content in &lt;code>public/&lt;/code> to GitHub - at some point I&amp;rsquo;ll automate this
+using GitHub Actions.&lt;/p>
+&lt;h2 id="github-pages">GitHub Pages&lt;/h2>
+&lt;p>In terms of hosting I wanted to start with something cheap or free for
+two main reasons. Firstly, the content on the site is static and does
+not require any complex infrastructure. Secondly, I did not want to
+invest into something that I had not fully developed the habit of
+contributing to.&lt;/p>
+&lt;p>What better way to do this than to use GitHub Pages, which I enabled on
+my aadamali.net repository and configured to automatically create a new
+deployment on pushes to the main branch.&lt;/p>
+&lt;h2 id="design">Design&lt;/h2>
+&lt;p>The design is something that I wanted to be personal yet simple. That is
+why I didn&amp;rsquo;t want to use one of the many community created &lt;a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo
+themes&lt;/a>
+that are freely available but rather
+write my own CSS.&lt;/p>
+&lt;p>From my point of view there are two main components to this design, the
+colour scheme and the font.&lt;/p>
+&lt;p>In terms of colours I decided to use the &lt;a href="https://github.com/morhetz/gruvbox#dark-mode-1" target="_blank" rel="noopener">Gruvbox Dark
+mode&lt;/a>
+palette because I
+use it on my machines, mainly as my terminal colour scheme, as it is
+easy on the eyes. However, this is very much subject to change as I
+didn&amp;rsquo;t want to spend too much time on design, so I went with a
+predefined colour palette.&lt;/p>
+&lt;p>&lt;a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">JetBrains Mono&lt;/a>
+is the font I have
+chosen and similar to the colour scheme I use it in the terminal as well
+as text editors / IDEs. I&amp;rsquo;m conflicted in this area as I don&amp;rsquo;t think the
+monospace look is to everyone&amp;rsquo;s taste and am considering switching to
+something like &lt;a href="https://fonts.google.com/specimen/Fira&amp;#43;Sans" target="_blank" rel="noopener">Fira Sans&lt;/a>
+or &lt;a href="https://fonts.google.com/specimen/Fira&amp;#43;Sans&amp;#43;Condensed" target="_blank" rel="noopener">Fira Sans
+Condensed&lt;/a>
+as
+they&amp;rsquo;re in the same family as &lt;a href="https://fonts.google.com/specimen/Fira&amp;#43;Code" target="_blank" rel="noopener">Fira
+Code&lt;/a>
+and &lt;a href="https://fonts.google.com/specimen/Fira&amp;#43;Mono" target="_blank" rel="noopener">Fira
+Mono&lt;/a>
+, two fonts that I use
+alternatively to JetBrains Mono.&lt;/p>
+&lt;h2 id="closing">Closing&lt;/h2>
+&lt;p>Thank you for taking the time to read this post. Please feel free to
+contact me with your thoughts on the font choice, or with topics you&amp;rsquo;d
+like me to write about in the future.&lt;/p></description></item><item><title>Hello World!</title><link>https://aadamali.net/blog/hello-world/</link><pubDate>2023-06-18</pubDate><guid>https://aadamali.net/blog/hello-world/</guid><description>&lt;h2 id="who-am-i">Who Am I?&lt;/h2>
 &lt;p>Hello! My name is Aadam, at the time of writing I&amp;rsquo;m an Apprentice DevOps
 Engineer working at
-&lt;a href="https://www.gov.uk/government/organisations/hm-revenue-customs/about">HMRC&lt;/a>,
-on the &lt;a href="https://hmrc.github.io/">MDTP&lt;/a> (Multi Channel Digital Tax
+&lt;a href="https://www.gov.uk/government/organisations/hm-revenue-customs/about" target="_blank" rel="noopener">HMRC&lt;/a>
+,
+on the &lt;a href="https://hmrc.github.io/" target="_blank" rel="noopener">MDTP&lt;/a>
+(Multi Channel Digital Tax
 Platform) for the Build and Deploy team.&lt;/p>
 &lt;p>I&amp;rsquo;ve been involved with technology for the best part of the last 6
 years, ever since I built my first PC (Pentium G4400, RX 480, 8GB RAM).
-And thanks to the first COVID-19 lockdown I started learning full
-stack web development - my first foray into programming outside of my
-GSCE and A-Level Computer Science courses. Over the following months, I
-learnt HTML, CSS, and JavaScript before moving on to Node.js, React,
-and MongoDB, using Linux (Ubuntu via WSL) and Git along the way.&lt;/p>
+And thanks to the first COVID-19 lockdown I started learning full stack
+web development - my first foray into programming outside of my GSCE and
+A-Level Computer Science courses. Over the following months, I learnt
+HTML, CSS, and JavaScript before moving on to Node.js, React, and
+MongoDB, using Linux (Ubuntu via WSL) and Git along the way.&lt;/p>
 &lt;p>My first self-directed full stack project was
-&lt;a href="https://github.com/Aadam-Ali/twitter-clone">twitter-clone&lt;/a>, which
+&lt;a href="https://github.com/Aadam-Ali/twitter-clone" target="_blank" rel="noopener">twitter-clone&lt;/a>
+, which
 unsurpisingly was my attempt to clone Twitter using the MERN (MongoDB,
 Express, React, and Node.js) stack, if you have look at the repository
 my lack of knowledge at the time really shows - I wrote all the code
@@ -29,17 +117,18 @@ time working with AWS, Python, Terraform, Jenkins, and Artifactory.&lt;/p>
 writing that I was doing. As someone who doesn&amp;rsquo;t particularly enjoy
 writing I wanted a reason to keep writing regularly.&lt;/li>
 &lt;li>Most software / devops engineers have benefited from blog posts,
-whether it was finding a solution to a very specific problem,
-learning a new concept, or even gaining understanding of different
-perspectives on various topics.&lt;/li>
+whether it was finding a solution to a very specific problem, learning
+a new concept, or even gaining understanding of different perspectives
+on various topics.&lt;/li>
 &lt;li>A blog allows me to keep a record of the projects, learnings,
 experiences, and achievements I&amp;rsquo;ve made over time - it&amp;rsquo;s a window into
 past versions of myself that I can look back on and reflect on how
 I&amp;rsquo;ve improved.&lt;/li>
 &lt;/ul>
 &lt;p>Alongside the above points the straw that broke the camel&amp;rsquo;s back was
-reading Ben Kuhn&amp;rsquo;s &lt;a href="https://www.benkuhn.net/writing/">&amp;lsquo;Why and how to write things on the
-Internet&amp;rsquo;&lt;/a>. For anyone else
+reading Ben Kuhn&amp;rsquo;s &lt;a href="https://www.benkuhn.net/writing/" target="_blank" rel="noopener">&amp;lsquo;Why and how to write things on the
+Internet&amp;rsquo;&lt;/a>
+. For anyone else
 considering starting a blog but unsure about how to start writing, I
 highly recommend reading it.&lt;/p>
 &lt;h2 id="what-can-you-expect">What Can You Expect?&lt;/h2>
@@ -48,15 +137,16 @@ to, however, I expect that the majority of posts will cover topics, and
 concepts under the DevOps umbrella: cloud, programming, cybersecurity,
 etc.&lt;/p>
 &lt;p>What I can guarantee is that my next few posts will be about: the
-architecture of this site, my hardware, my development environment,
-and my apprenticeship experience. You can also expect new posts every
-two weeks.&lt;/p>
-&lt;p>I also intend to add another section to the site, Snippets.
-Snippets will be very short posts containing code snippets and commands
-that I find useful in my daily work.&lt;/p>
+architecture of this site, my hardware, my development environment, and
+my apprenticeship experience. You can also expect new posts every two
+weeks.&lt;/p>
+&lt;p>I also intend to add another section to the site, Snippets. Snippets
+will be very short posts containing code snippets and commands that I
+find useful in my daily work.&lt;/p>
 &lt;h2 id="closing">Closing&lt;/h2>
-&lt;p>Thank you for taking the time to read this post, hopefully, the first
-of many. If you are interested in following my blog, there is an &lt;a href="https://aadamali.net/blog/rss.xml">RSS
-feed&lt;/a> available. Feel free to reach out to me if you
-have any suggestions for topics you&amp;rsquo;d like me to write about, or
-improvements that could be made to this site.&lt;/p></description></item></channel></rss>
+&lt;p>Thank you for taking the time to read this post, hopefully, the first of
+many. If you are interested in following my blog, there is an &lt;a href="https://aadamali.net/blog/rss.xml">RSS
+feed&lt;/a>
+available. Feel free to reach out to me if you have
+any suggestions for topics you&amp;rsquo;d like me to write about, or improvements
+that could be made to this site.&lt;/p></description></item></channel></rss>
