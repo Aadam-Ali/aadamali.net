@@ -1,26 +1,11 @@
-/* GLOBAL */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans:wght@400;500;600&display=swap');
 
+/* GLOBAL */
 :root {
-    /*  COLOURS FROM: https://github.com/morhetz/gruvbox */
-    --background: #282828;
-    --black: #282828;
-    --red: #cc241d;
-    --green: #98971a;
-    --yellow: #d79921;
-    --blue: #458588;
-    --purple: #b16286;
-    --cyan: #689d6a;
-    --gray: #a89984;
-    --brightBlack: #928374;
-    --brightRed: #fb4934;
-    --brightGreen: #b8bb26;
-    --brightYellow: #fabd2f;
-    --brightBlue: #83a598;
-    --brightPurple: #d3869b;
-    --brightCyan: #8ec07c;
-    --white: #ebdbb2;
-    --foreground: #fbf1c7;
+  --background: #EDEDE9;
+  --headers: #2D372D;
+  --links: #044E69;
+  --foreground: #12120F;
 }
 
 * {
@@ -32,9 +17,9 @@ body {
     background-color: var(--background);
     color: var(--foreground);
     height: 100%;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5rem;
 }
 
@@ -49,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--brightGreen);
+    color: var(--headers);
 }
 
 ul {
@@ -57,12 +42,12 @@ ul {
 }
 
 a {
-    color: var(--brightCyan);
+    color: var(--links);
 }
 
 code {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.81rem;
+    font-family: monospace;
+    font-size: 0.9rem;
 }
 
 
@@ -82,7 +67,7 @@ code {
 }
 
 div>.chroma {
-    padding: 0.3rem;
+    padding: 0.5rem;
 }
 
 /* https://discourse.gohugo.io/t/height-mismatch-of-highlighted-line-number-in-syntax-highlighting/42304/8 */
@@ -102,7 +87,7 @@ div.highlight>div.chroma>table.lntable .hl {
 }
 
 #about-job {
-    color: var(--brightGreen);
+    color: var(--headers);
     padding-bottom: 1rem;
 }
 
