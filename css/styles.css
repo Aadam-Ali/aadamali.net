@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans:wght@400;500;600&display=swap');
-
 /* GLOBAL */
 :root {
-  --background: #F7EDDE;
-  --headers: #2D372D;
+  --headers: #414141;
   --links: #044E69;
-  --foreground: #12120F;
+  --foreground: #444444;
+  --accent: #5E5E5E;
 }
 
 * {
@@ -14,10 +12,9 @@
 }
 
 body {
-    background-color: var(--background);
     color: var(--foreground);
     height: 100%;
-    font-family: 'Work Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -37,12 +34,29 @@ h6 {
     color: var(--headers);
 }
 
+h1 {
+    line-height: 2rem;
+}
+
 ul {
     list-style-position: inside;
 }
 
 a {
     color: var(--links);
+}
+
+table {
+   border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+
+td, th {
+  padding-left: 0.25rem;
+  padding-right: 0.5rem;
 }
 
 code {
@@ -79,7 +93,7 @@ div.highlight>div.chroma>table.lntable .hl {
 /* ID */
 #header {
     padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 #about-name {
@@ -114,11 +128,11 @@ div.highlight>div.chroma>table.lntable .hl {
     margin-bottom: 0.25rem;
 }
 
-#page-info {
-    color: var(--gray)
+#page-info, #about-job {
+    color: var(--accent)
 }
 
-#page-content>p, #page-content>ul, #page-content>ol {
+#page-content>p, #page-content>ul, #page-content>ol, #page-content>table {
     margin: 1.5rem 0rem;
 }
 
