@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /tags/
+Disallow: /categories
+Sitemap: https://aadamali.net/sitemap.xml

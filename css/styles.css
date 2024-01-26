@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+
 /* GLOBAL */
 :root {
-  --headers: #414141;
-  --links: #044E69;
-  --foreground: #444444;
-  --accent: #5E5E5E;
+  --background: #1d2021;
+  --foreground: #ebdbb2;
+  --foreground2: #bdae93;
+  --links: #fe8019;
+  --green: #98971a;
+  --accent: #928374;
+  --headers: #d79921;
+  --tags: #8ec07c;
 }
 
 * {
@@ -12,68 +19,161 @@
 }
 
 body {
+    background: var(--background);
     color: var(--foreground);
     height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
-    font-size: 1rem;
+    font-family: Menlo, Monaco, 'Spline Sans Mono', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+    font-size: 0.95rem;
     line-height: 1.5rem;
 }
 
-.container {
-    margin: auto;
-}
-
-/* ELEMENTS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--headers);
-}
-
-h1 {
+    display:inline-block;
     line-height: 2rem;
 }
 
-ul {
-    list-style-position: inside;
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
 }
 
 a {
     color: var(--links);
 }
 
-table {
-   border-collapse: collapse;
+a:hover {
+    color: var(--background);
+    background-color: var(--links);
+    text-decoration: none;
 }
 
 table, td, th {
     border: 1px solid;
+    border-collapse: collapse;
 }
 
 td, th {
-  padding-left: 0.25rem;
-  padding-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
 }
 
-code {
-    font-family: monospace;
-    font-size: 0.9rem;
+ul li {
+    list-style-position: outside;
+    margin-left: 0.95rem;
 }
 
+.container {
+    margin: auto;
+}
+/* END */
 
-/* CLASS */
-.skill-item::before, .page-link::before {
-    content: "-";
-    margin-right: 0.5rem;
+/* NAVBAR & FOOTER */
+#navbar, #footer {
+    padding: 1rem 0
 }
 
-.page-link {
+#navbar ul, #footer ul {
     list-style: none;
 }
 
+#navbar li, #footer li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+#navbar li > a, #footer li > a {
+    color: var(--foreground);
+}
+
+#navbar li > a:hover, #footer li > a:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+#navbar-left {
+    width: 50%;
+    float: left;
+}
+
+#navbar-left h2 {
+    color: var(--green);
+    word-wrap:break-word;
+}
+
+#navbar-right {
+    display: flex;
+    justify-content: right;
+}
+
+#name > a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+#name > a:hover {
+    color: var(--background);
+    background-color: var(--green);
+}
+/* END */
+
+/* SINGLE LAYOUT */
+#page-title-section > p {
+    color: var(--accent)
+}
+
+#page-title-section a {
+    color: var(--foreground2)
+}
+
+#page-title-section a:hover {
+    color: var(--background);
+    background-color: var(--foreground2);
+}
+
+#page-title-section, #content-type-header {
+    padding-bottom: 1.5rem;
+}
+
+#page-title {
+    margin-bottom: 0.5rem;
+}
+
+#page-content>p, #page-content>ul, #page-content>ol, #page-content>table {
+    margin: 1.5rem 0rem;
+}
+
+#page-content>ul {
+    margin-left: 1rem;
+}
+
+#tags-section a {
+    color: var(--tags);
+}
+
+#tags-section a:hover {
+    color: var(--background);
+    background-color: var(--tags);
+}
+/* END */
+
+/* HOME PAGE */
+#homepage-list {
+    margin-left: 1rem;
+}
+/* END */
+
+/* CODE BLOCK */
 .highlight .chroma {
     overflow-x: scroll;
     line-height: 1rem;
@@ -89,60 +189,10 @@ div.highlight>div.chroma>table.lntable .hl {
     display: flex;
 }
 
-/* ID */
-#header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+div.highlight {
+    margin: 1.5rem 0;
 }
-
-#about-name {
-    font-size: 2rem;
-}
-
-#about-job {
-    color: var(--headers);
-    padding-bottom: 1rem;
-}
-
-#header>ul>li,
-#footer>ul>li {
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-#about-name,
-#page-title,
-#content-type-header {
-    font-size: 2rem;
-}
-
-#about-job,
-#content-type-header,
-#page-title-section {
-    margin-bottom: 1rem;
-}
-
-#page-title,
-#about-name {
-    margin-bottom: 0.25rem;
-}
-
-#page-info, #about-job {
-    color: var(--accent)
-}
-
-#page-content>p, #page-content>ul, #page-content>ol, #page-content>table {
-    margin: 1.5rem 0rem;
-}
-
-#page-content>ul, #page-content>ol {
-    margin-left: 2rem;
-    list-style-position: outside;
-}
-
-#skills>li {
-    list-style: none;
-}
+/* END */
 
 /* MEDIA QUERIES */
 @media (max-width: 1279px) {
@@ -156,3 +206,4 @@ div.highlight>div.chroma>table.lntable .hl {
         width: 50%;
     }
 }
+/* END */
